@@ -8,7 +8,11 @@ import ChoosePwScreen from "./screens/ChoosePwScreen";
 import CalendarScreen from "./screens/CalendarScreen";
 
 export default function App() {
-  return <View style={styles.container}></View>;
+  return (
+    <View style={styles.container}>
+      <ChoosePwScreen title="Weiter" />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
