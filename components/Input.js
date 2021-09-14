@@ -5,8 +5,20 @@ import colors from "../constants/colors";
 const Input = (props) => {
   return (
     <View style={styles.container}>
-      <TextInput style={styles.input} secureTextEntry={true} placeholder="Passwort" placeholderTextColor={colors.accBlue} maxLength={6}/>
-      <TextInput style={styles.input} secureTextEntry={true} placeholder="Wiederholung" placeholderTextColor={colors.accBlue} maxLength={6}/>
+      <TextInput
+        style={styles.input}
+        secureTextEntry={true}
+        placeholder="Passwort"
+        placeholderTextColor={colors.accBlue}
+        maxLength={6}
+      />
+      <TextInput
+        style={styles.input}
+        secureTextEntry={true}
+        placeholder="Wiederholung"
+        placeholderTextColor={colors.accBlue}
+        maxLength={6}
+      />
     </View>
   );
 };
@@ -17,17 +29,14 @@ const styles = StyleSheet.create({
   container: {
     height: 300,
     width: "80%",
-    paddingTop: 100,
+    justifyContent: "center",
   },
 
-  input:{
-      borderBottomColor: colors.mainG,
-      borderBottomWidth: 2,
-      width: 200,
-      height: 50,
-  
-   
- 
+  input: {
+    borderBottomColor: colors.mainG,
+    borderBottomWidth: 2,
+    width: 200,
+    height: 50,
   },
 });
 

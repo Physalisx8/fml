@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { View, StyleSheet, Image } from "react-native";
 
-
 const UILogo = (props) => {
   return (
-    <View >
-            <Image style={styles.logo} source={props.log}/>
+    <View>
+      <Image style={styles.logo} source={require("../assets/iE-wdltA.png")} />
     </View>
   );
 };
@@ -13,10 +12,9 @@ const UILogo = (props) => {
 //UI Logo muss auch n eigenes Component sein
 
 const styles = StyleSheet.create({
-
-  logo:{
+  logo: {
     width: 60,
-   height: 70,
+    height: 70,
   },
 });
 
