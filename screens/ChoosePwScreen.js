@@ -3,6 +3,7 @@ import { View, StyleSheet, Image, Alert, Pressable, Text } from "react-native";
 import UILogo from "../components/UILogo";
 import colors from "../constants/colors";
 import Input from "../components/Input";
+<<<<<<< HEAD
 /**
  *  ChoosePwScreen for Starters!
  *  takes the UILogo & Input Component.
@@ -15,26 +16,28 @@ import Input from "../components/Input";
  * @param {} props
  * @returns
  */
+=======
+>>>>>>> 0f36943554a315b218f3f670dccd1a6aada52df6
+import * as content from "../content/texts.json";
+
 const ChoosePwScreen = (props) => {
   return (
     <View style={styles.imageBox}>
-      <Image style={styles.logo} source={require("../assets/iE-wdltA.png")} />
-
-      <View style={styles.container}>
-        <View>
-          <View style={styles.title}>
-            <Text style={styles.text2}>Wähle ein Passwort</Text>
-          </View>
-          <Input />
-          <View style={styles.button}>
-            <Pressable
-              style={styles.button1}
-              onPress={() => Alert.alert("am pressed omg")}
-            >
-              <Text style={styles.text}>{props.title}</Text>
-            </Pressable>
-          </View>
+      <View>
+        <UILogo src="lock" />
+        <View style={styles.title}>
+          <Text style={styles.text2}>{content.ChoosePwScreen.headline}</Text>
         </View>
+        <Input />
+      </View>
+
+      <View style={styles.button}>
+        <Pressable
+          style={styles.button1}
+          onPress={() => Alert.alert("am pressed omg")}
+        >
+          <Text style={styles.text}>{props.title}</Text>
+        </Pressable>
       </View>
     </View>
   );
@@ -45,34 +48,21 @@ const ChoosePwScreen = (props) => {
 
 const styles = StyleSheet.create({
   imageBox: {
-    justifyContent: "flex-start",
-    alignItems: "flex-start",
-    flex: 0.2,
-    width: 60,
-    height: 70,
+    flex: 1,
+    flexDirection: "column",
+    paddingHorizontal: 60,
+    paddingVertical: 80,
+    justifyContent: "space-between",
   },
-  logo: {
-    width: 60,
-    height: 70,
-    resizeMode: "contain",
-  },
-  container: {
-    flex: 0.8,
-    justifyContent: "center",
-    alignItems: "center",
-    height: "80%",
-    width: "60%",
-    paddingTop: 50,
-  },
-
   title: {
     color: colors.mainG,
+    marginTop: 40,
     fontSize: 32,
     lineHeight: 36,
   },
   button: {
-    margin: 50,
     elevation: 5,
+    alignItems: "center",
   },
   text: {
     color: colors.mainLG,

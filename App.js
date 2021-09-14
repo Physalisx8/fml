@@ -8,11 +8,7 @@ import ChoosePwScreen from "./screens/ChoosePwScreen";
 import CalendarScreen from "./screens/CalendarScreen";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-     
-    </View>
-  );
+  return <View style={styles.container}></View>;
 }
 
 const styles = StyleSheet.create({
@@ -23,6 +19,7 @@ const styles = StyleSheet.create({
 });
 
 /**
+<<<<<<< HEAD
  * Just Commentary Dump to test diff Screens with their props.
  * 
  *  <LogoScreen title='Press Me'/>
