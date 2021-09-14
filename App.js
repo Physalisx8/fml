@@ -1,12 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import colors from './constants/colors';
+import InfoTextScreen from './screens/InfoTextScreen';
+import LogoScreen from './screens/LogoScreen';
+import ChoosePwScreen from './screens/ChoosePwScreen';
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <ChoosePwScreen title="Weiter"/>
     </View>
   );
 }
@@ -14,8 +18,14 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: colors.mainLG,
     alignItems: 'center',
     justifyContent: 'center',
   },
 });
+
+/**
+ *   <LogoScreen title='Press Me'/>
+ * <InfoTextScreen header="Hallo!" title="Weiter"/>
+ * 
+ */
