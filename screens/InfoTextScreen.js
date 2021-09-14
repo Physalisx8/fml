@@ -2,7 +2,17 @@ import React, { useState } from "react";
 import { View, StyleSheet, Image, Alert, Pressable, Text, ProgressBarAndroidBase } from "react-native";
 
 import colors from "../constants/colors";
-
+/**
+ * InfoTextScreen for Starters!
+ * takes the Navigation Component and a WoT
+ * 
+ *  
+ * ToDo: Navigation Bar
+ * Decide on a diff Font? 
+ * 
+ * @param {*} props 
+ * @returns 
+ */
 
 const InfoTextScreen = (props) => {
   return (
@@ -28,10 +38,7 @@ const InfoTextScreen = (props) => {
 };
 //quick reminder: Button gehört zum Navigation Component. Touchable Opacity wär noch cool.
 //Standard Button lässt sich nicht verändern. Müsste Pressable nehmen.
-// <Button color={colors.accBlue} title={props.title} onPress={()=> Alert.alert('am pressed omg')}/>´
-// TO DO herausfinden wie man Textblöcke irgendwie cooler einbindet.... 
-//ANDERE FONT? 
-//AND WHYS oben n schwarzer Balken..
+
 
 const styles = StyleSheet.create({
   container: {

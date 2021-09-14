@@ -2,7 +2,16 @@ import React, { useState } from "react";
 import { View, StyleSheet, Image, Alert, Pressable, Text } from "react-native";
 
 import colors from "../constants/colors";
-
+/**
+ * LogoScreen for STARTERS omg. WELCOME 
+ * 
+ * takes the Image Source of our Logo and has a future Navigation Component
+ * 
+ * ToDo: Navigation and create a Logo. The Image is a dummy rn.
+ * 
+ * @param {*} props 
+ * @returns 
+ */
 const LogoScreen = (props) => {
   return (
     <View style={styles.container}>
@@ -19,9 +28,7 @@ const LogoScreen = (props) => {
     </View>
   );
 };
-//quick reminder: Button gehört zum Navigation Component. Touchable Opacity wär noch cool.
-//Standard Button lässt sich nicht verändern. Müsste Pressable nehmen.
-// <Button color={colors.accBlue} title={props.title} onPress={()=> Alert.alert('am pressed omg')}/>
+
 const styles = StyleSheet.create({
   container: {
     height: "50%",
