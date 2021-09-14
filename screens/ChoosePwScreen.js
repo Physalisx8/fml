@@ -18,23 +18,21 @@ import Input from "../components/Input";
 const ChoosePwScreen = (props) => {
   return (
     <View style={styles.imageBox}>
-      <Image style={styles.logo} source={require("../assets/iE-wdltA.png")} />
-
-      <View style={styles.container}>
-        <View>
-          <View style={styles.title}>
-            <Text style={styles.text2}>Wähle ein Passwort</Text>
-          </View>
-          <Input />
-          <View style={styles.button}>
-            <Pressable
-              style={styles.button1}
-              onPress={() => Alert.alert("am pressed omg")}
-            >
-              <Text style={styles.text}>{props.title}</Text>
-            </Pressable>
-          </View>
+      <View>
+        <UILogo />
+        <View style={styles.title}>
+          <Text style={styles.text2}>Wähle ein Passwort</Text>
         </View>
+        <Input />
+      </View>
+
+      <View style={styles.button}>
+        <Pressable
+          style={styles.button1}
+          onPress={() => Alert.alert("am pressed omg")}
+        >
+          <Text style={styles.text}>{props.title}</Text>
+        </Pressable>
       </View>
     </View>
   );
@@ -45,34 +43,21 @@ const ChoosePwScreen = (props) => {
 
 const styles = StyleSheet.create({
   imageBox: {
-    justifyContent: "flex-start",
-    alignItems: "flex-start",
-    flex: 0.2,
-    width: 60,
-    height: 70,
+    flex: 1,
+    flexDirection: "column",
+    paddingHorizontal: 60,
+    paddingVertical: 80,
+    justifyContent: "space-between",
   },
-  logo: {
-    width: 60,
-    height: 70,
-    resizeMode: "contain",
-  },
-  container: {
-    flex: 0.8,
-    justifyContent: "center",
-    alignItems: "center",
-    height: "80%",
-    width: "60%",
-    paddingTop: 50,
-  },
-
   title: {
     color: colors.mainG,
+    marginTop: 40,
     fontSize: 32,
     lineHeight: 36,
   },
   button: {
-    margin: 50,
     elevation: 5,
+    alignItems: "center",
   },
   text: {
     color: colors.mainLG,

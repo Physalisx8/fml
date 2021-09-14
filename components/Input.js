@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   container: {
     height: 300,
     width: "80%",
-    paddingTop: 100,
+    justifyContent: "center",
   },
 
   input: {
