@@ -7,7 +7,6 @@ import { View, StyleSheet, Image } from "react-native";
  * @param {*} props
  * @returns
  */
-
 const UILogo = (props) => {
   console.log(props);
   // set logo path dependent on what prop name was given

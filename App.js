@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
 });
 
 /**
+<<<<<<< HEAD
  * Just Commentary Dump to test diff Screens with their props.
  * 
  *  <LogoScreen title='Press Me'/>
