@@ -2,9 +2,15 @@ import React, { useState } from "react";
 import { View, StyleSheet, Image } from "react-native";
 
 const UILogo = (props) => {
+  console.log(props);
+  var ImgSrc =
+    props.src === "lock"
+      ? require("../assets/iE-wdltA.png")
+      : require("../assets/settings.png");
+  console.log(ImgSrc);
   return (
     <View>
-      <Image style={styles.logo} source={require("../assets/iE-wdltA.png")} />
+      <Image style={styles.logo} source={ImgSrc} />
     </View>
   );
 };

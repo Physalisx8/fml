@@ -8,7 +8,7 @@ const ChoosePwScreen = (props) => {
   return (
     <View style={styles.imageBox}>
       <View>
-        <UILogo />
+        <UILogo src="lock" />
         <View style={styles.title}>
           <Text style={styles.text2}>Wähle ein Passwort</Text>
         </View>
