@@ -15,13 +15,15 @@ import Input from "../components/Input";
  * @param {} props
  * @returns
  */
+import * as content from "../content/texts.json";
+
 const ChoosePwScreen = (props) => {
   return (
     <View style={styles.imageBox}>
       <View>
         <UILogo src="lock" />
         <View style={styles.title}>
-          <Text style={styles.text2}>Wähle ein Passwort</Text>
+          <Text style={styles.text2}>{content.ChoosePwScreen.headline}</Text>
         </View>
         <Input />
       </View>
