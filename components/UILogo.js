@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import { View, StyleSheet, Image } from "react-native";
 
+/**
+ * UILogo Component for two screens. 
+ * 1 Lock Symbol and the preferences Screen.
+ * @param {*} props 
+ * @returns 
+ */
 
 const UILogo = (props) => {
   return (
@@ -9,8 +15,6 @@ const UILogo = (props) => {
     </View>
   );
 };
-//quick reminder: Button gehört zum Navigation Component. Touchable Opacity wär noch cool.
-//UI Logo muss auch n eigenes Component sein
 
 const styles = StyleSheet.create({
 
