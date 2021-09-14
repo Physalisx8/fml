@@ -3,6 +3,7 @@ import { View, StyleSheet, Image, Alert, Pressable, Text } from "react-native";
 import UILogo from "../components/UILogo";
 import colors from "../constants/colors";
 import Input from "../components/Input";
+import * as content from "../content/texts.json";
 
 const ChoosePwScreen = (props) => {
   return (
@@ -10,7 +11,7 @@ const ChoosePwScreen = (props) => {
       <View>
         <UILogo src="lock" />
         <View style={styles.title}>
-          <Text style={styles.text2}>Wähle ein Passwort</Text>
+          <Text style={styles.text2}>{content.ChoosePwScreen.headline}</Text>
         </View>
         <Input />
       </View>
