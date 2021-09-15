@@ -6,14 +6,22 @@ import InfoTextScreen from "./screens/InfoTextScreen";
 import LogoScreen from "./screens/LogoScreen";
 import ChoosePwScreen from "./screens/ChoosePwScreen";
 import CalendarScreen from "./screens/CalendarScreen";
+import NotificationScreen from "./screens/NotificationScreen";
+
+import * as content from "./constants/texts";
+
 
 export default function App() {
   return (
     <View style={styles.container}>
+<<<<<<< HEAD
       <CalendarScreen
         header="Wann hattest du deine letzte Menstruation?"
         title="Weiter"
       />
+=======
+     <Text>huhu</Text>
+>>>>>>> b7f5f52 (NotificationScreen)
     </View>
   );
 }
@@ -30,11 +38,13 @@ const styles = StyleSheet.create({
  * Just Commentary Dump to test diff Screens with their props.
  * 
  *  <LogoScreen title='Press Me'/>
+ * <NotificationScreen/>
  * <InfoTextScreen header="Hallo!" title="Weiter"/>
  * <ChoosePwScreen title="Weiter"/>
  *  <CalendarScreen
         header="Wann hattest du deine letzte Menstruation?"
         title="Weiter"
       />
+
  *
  */
