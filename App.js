@@ -8,7 +8,6 @@ import ChoosePwScreen from "./screens/ChoosePwScreen";
 import CalendarScreen from "./screens/CalendarScreen";
 import NotificationScreen from "./screens/NotificationScreen";
 import MensCycleScreen from "./screens/MensCycleScreen";
-import AddEntryScreen from "./screens/AddEntryScreen";
 
 import * as content from "./constants/texts";
 import ChangePWScreen from "./screens/ChangePWScreen";
