@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import { View, StyleSheet, Image, Alert, Pressable, Text } from "react-native";
-import UILogo from "../components/UILogo";
+import { View, StyleSheet, Text } from "react-native";
 import colors from "../constants/colors";
-import Input from "../components/Input";
-//import * as content from "../constants/texts";
 import TextWSwitch from "../components/TextWSwitch";
 
+
 /**
- *  NotificationScreen for Starters!
- * takes the TextWSwitch Component.
+ *  NotificationScreen for Starters! and for the Settings.. it can be recycled I guess? *cool*
+ * takes the TextWSwitch Component and asks if Notifications are acceptable
  *
  * TODo Figure out how you can reuse the component and hand over the texts..
+ * and how to safe the state and all..
+ * 
  *
  *
  * @param {} props

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { View, StyleSheet, Image, Alert, Pressable, Text, ProgressBarAndroidBase } from "react-native";
+import { View, StyleSheet, Alert, Pressable, Text, } from "react-native";
+import * as content from "../constants/texts";
 
 import colors from "../constants/colors";
 /**
@@ -22,7 +23,7 @@ const InfoTextScreen = (props) => {
         </View>
         
         <View style={styles.textBox}>
-        <Text style={styles.text2}>Willkommen bei unserer App. Lorem IPSUM DOLOR. Brummli Brummli Brummli.  DAS MÜSSEN WÜR HÜBSCH MACHEN</Text>
+        <Text style={styles.text2}>{content.Datenschutz4}</Text>
         </View>
 
       <View style={styles.button}>
