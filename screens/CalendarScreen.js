@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { View, StyleSheet, Text, Pressable, Alert } from "react-native";
 import colors from "../constants/colors";
-import Calendar from "../components/Calendar";
+import { Calendar, CalendarList, Agenda } from "react-native-calendars";
+import { LocaleConfig } from "react-native-calendars";
 /**
  * This is the Calendar Screen for Starters.
  * It holds the "When you had your last mens?" Question ft. the
@@ -12,31 +13,76 @@ import Calendar from "../components/Calendar";
  * also find a way to get the input outta it but that's prob. a diff issue
  *
  */
+LocaleConfig.locales["de"] = {
+  monthNames: [
+    "Januar",
+    "Februar",
+    "März",
+    "April",
+    "Mai",
+    "Juni",
+    "Juli",
+    "August",
+    "September",
+    "Oktober",
+    "November",
+    "Dezember",
+  ],
+  monthNamesShort: [
+    "Jan.",
+    "Feb.",
+    "März",
+    "April",
+    "Mai",
+    "Jun.",
+    "Jul.",
+    "Aug.",
+    "Sept.",
+    "Okt.",
+    "Nov.",
+    "Dez.",
+  ],
+  dayNames: [
+    "Sonntag",
+    "Montag",
+    "Dienstag",
+    "Mittwoch",
+    "Donnerstag",
+    "Freitag",
+    "Samstag",
+  ],
+  dayNamesShort: ["So", "Mo", "Di", "Mi", "Do", "Sa"],
+  today: "heute",
+};
+LocaleConfig.defaultLocale = "de";
+
 const CalendarScreen = (props) => {
+  const [selectedDay, setSelectedDay] = useState("");
+  let mark = {
+    [selectedDay]: { selected: true, selectedColor: colors.accBlue },
+  };
+
+  function setDay(day) {
+    console.log("function: " + day);
+    setSelectedDay(day);
+  }
+
   return (
     //props.header is given when calling the Screen
     <View style={styles.container}>
       <Text style={styles.title}>{props.header}</Text>
 
       <Calendar
-        markingType={"period"}
-        markedDates={{
-          "2021-09-21": {
-            startingDay: true,
-            color: colors.primBlue,
-            textColor: "white",
-          },
-          "2021-09-22": { color: colors.primBlue, textColor: "white" },
-          "2021-09-23": { color: colors.primBlue, textColor: "white" },
-          "2021-09-24": { color: colors.primBlue, textColor: "white" },
-          "2021-09-25": {
-            endingDay: true,
-            color: colors.primBlue,
-            textColor: "white",
-          },
+        onDayPress={(day) => {
+          const date = day.dateString;
+          setDay(date);
+        }}
+        markedDates={mark}
+        enableSwipeMonths={true}
+        theme={{
+          calendarBackground: colors.mainLG,
         }}
       />
-
       <View style={styles.button}>
         <Pressable
           style={styles.button1}

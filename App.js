@@ -10,7 +10,10 @@ import CalendarScreen from "./screens/CalendarScreen";
 export default function App() {
   return (
     <View style={styles.container}>
-      <ChoosePwScreen title="Weiter" />
+      <CalendarScreen
+        header="Wann hattest du deine letzte Menstruation?"
+        title="Weiter"
+      />
     </View>
   );
 }
