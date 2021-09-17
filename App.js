@@ -22,6 +22,7 @@ import ChangePWScreen from "./screens/ChangePWScreen";
  */
 export default function App() {
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
     <View style={styles.container}>
 <<<<<<< HEAD
@@ -39,6 +40,11 @@ export default function App() {
     <AddEntryScreen/>
   </View>;
 >>>>>>> df7d898 (new screens, minor text fixes)
+=======
+  return <View style={styles.container}>
+    <AddEntryScreen/>
+  </View>;
+>>>>>>> df7d898e3f57f7775c9c97cd06ad4309d74ecada
 }
 
 const styles = StyleSheet.create({
