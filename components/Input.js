@@ -4,12 +4,13 @@ import colors from "../constants/colors";
 
 /**
  * Password Input Component
- * maxLength currently at 6 - maybe numbers only? 
- * See TextInput Doc for further props
- *
+ * maxLength currently at 8
  * 
- * ToDo: eventually lower the placeholder on the line, so it doesn't hover above it that awkwardly. 
+ * ToDo: 
+ * Style
+ * eventually lower the placeholder on the line, so it doesn't hover above it that awkwardly. 
  * Also when toggled/pressed change color mebbe..
+ * & Logic ofc.. need to sort the min 4 PIN out 
  * 
  * @param {*} props
  * @returns Component
@@ -20,16 +21,10 @@ const Input = (props) => {
       <TextInput
         style={styles.input}
         secureTextEntry={true}
-        placeholder="Passwort"
-        placeholderTextColor={colors.accBlue}
-        maxLength={6}
-      />
-      <TextInput
-        style={styles.input}
-        secureTextEntry={true}
-        placeholder="Wiederholung"
-        placeholderTextColor={colors.accBlue}
-        maxLength={6}
+        keyboardType = 'numeric'
+        placeholder={props.title}
+        placeholderTextColor={colors.primBlue}
+        maxLength={8}
       />
     </View>
   );
@@ -37,7 +32,6 @@ const Input = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    height: 300,
     width: "80%",
     justifyContent: "center",
   },
@@ -47,6 +41,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 2,
     width: 200,
     height: 50,
+    fontSize: 16,
   },
 });
 

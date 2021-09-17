@@ -17,7 +17,7 @@ export const ZuM2= 'Die Zyklus- und Menstruationslänge ist sehr individuell. Ei
 export const ZuM3= '“Das einzig regelmäßige am Zyklus einer Menstruierenden Person, ist seine Unregelmäßigkeit.”'
 
 //view Start 01
-export const Datenschutz4 = 'Datenschutz ist uns besonders wichtig, daher werden deine Daten ausschließlich lokal auf deinem Endgerät gespeichert. Wir sind bemüht, diese App so übersichtlich und schlicht wie möglich zu halten. Wir erheben keine Daten, die für die Nutzung nicht unerlässlich sind.	Denn gerade sensible Gesundheitsdaten sind für werbetreibende Firmen sehr interessant, da die Daten einer schwangeren Person besonders wertvoll sind (1,50 Dollar im Gegensatz zu einer nicht schwangeren Person 10 cent).'
+export const Datenschutz4 = 'Willkommen bei unserer App! Datenschutz ist uns besonders wichtig, daher werden deine Daten ausschließlich lokal auf deinem Endgerät gespeichert. Wir sind bemüht, diese App so übersichtlich und schlicht wie möglich zu halten. Wir erheben keine Daten, die für die Nutzung nicht unerlässlich sind.	Denn gerade sensible Gesundheitsdaten sind für werbetreibende Firmen sehr interessant, da die Daten einer schwangeren Person besonders wertvoll sind (1,50 Dollar im Gegensatz zu einer nicht schwangeren Person 10 cent).'
 
 //view Start0.2
 export const start5 = 'Damit dein Zyklus vorherbestimmt werden kann, gib bitte deine durchschnittliche Menstruations- und Zykluslänge an. Du kannst sie später in den Einstellungen ändern.'
@@ -26,7 +26,7 @@ export const start5 = 'Damit dein Zyklus vorherbestimmt werden kann, gib bitte d
 export const start6 = 'Wann begann deine letzte Menstruation?'
 
 //view start 0.5
-export const start7 = 'Gib bitte ein mindestens vier-stellige PIN ein. Diese wird vor jedem App-aufruf abgefragt um deine Daten vor neugierigen Blicken zu schützen.'
+export const start7 = 'Gib bitte eine mindestens vier-stellige PIN ein. Diese wird vor jedem App Aufruf abgefragt um deine Daten vor neugierigen Blicken zu schützen.'
 
 //view start06
 export const start8='Soll die App dich an deine bevorstehende Menstruation erinnern?'
