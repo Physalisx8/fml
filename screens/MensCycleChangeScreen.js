@@ -1,28 +1,28 @@
 import React, { useState } from "react";
-import { View, StyleSheet, Image, Alert, Pressable, Text } from "react-native";
+import { View, StyleSheet, Alert, Pressable, Text } from "react-native";
 import InputNumber from "../components/InputNumber";
 import * as content from "../constants/texts";
 import colors from "../constants/colors";
 /**
- * InputScreen for Mens and Cycle Length with our lovely Logo FOR STARTERS!
+ * InputScreen for Mens and Cycle Length CHANGE
  *
- * ToDo Styling prop smarter to return to it by the time we have a Navigation and a Logo at hand :)
- *
+ * Style I suppose..
  *
  * @param {*} props
  * @returns
  */
-const MensCycleScreen = (props) => {
+const MensCycleChangeScreen = (props) => {
   return (
     <View style={styles.container}>
-      <Image style={styles.logo} source={require("../assets/bubble.jpg")} />
-      <Text style={styles.text}>{content.start5}</Text>
+      <Text style={styles.text2}>{props.header}</Text>
+      <Text style={styles.text}>{content.ZuM1}</Text>
+
       <InputNumber />
 
       <View style={styles.buttonBox}>
         <Pressable
           style={styles.buttonDesign}
-          onPress={() => Alert.alert("am pressed omg")}
+          onPress={() => Alert.alert(content.changeCheck)}
         >
           <Text style={styles.textButton}>{props.title}</Text>
         </Pressable>
@@ -35,20 +35,21 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: "column",
-    paddingHorizontal: 50,
-    paddingVertical: 20,
-    paddingTop: 30,
+    paddingHorizontal: 30,
+    paddingVertical: 50,
+
     //justifyContent: 'space-around',
     //alignItems: 'center'
   },
+  title: {
+    color: colors.accBlue,
+    fontSize: 32,
+    lineHeight: 36,
+  },
+
   text: {
     color: colors.mainG,
     fontSize: 20,
-  },
-
-  logo: {
-    width: 300,
-    height: 200,
   },
 
   //Button Styles:
@@ -74,4 +75,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MensCycleScreen;
+export default MensCycleChangeScreen;

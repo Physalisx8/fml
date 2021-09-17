@@ -40,7 +40,6 @@ const styles = StyleSheet.create({
     borderBottomColor: colors.mainG,
     borderBottomWidth: 2,
     width: 200,
-    height: 50,
     fontSize: 16,
   },
 });

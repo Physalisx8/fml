@@ -12,6 +12,9 @@ import AddEntryScreen from "./screens/AddEntryScreen";
 
 import * as content from "./constants/texts";
 import ChangePWScreen from "./screens/ChangePWScreen";
+import AboutUsScreen from "./screens/AboutUsScreen";
+import MensCycleChangeScreen from "./screens/MensCycleChangeScreen";
+import InfoWOButtScreen from "./screens/InfoWOButtScreen";
 
 /**
  * The MASTER APP.
@@ -21,30 +24,11 @@ import ChangePWScreen from "./screens/ChangePWScreen";
  * @returns
  */
 export default function App() {
-<<<<<<< HEAD
-<<<<<<< HEAD
   return (
     <View style={styles.container}>
-<<<<<<< HEAD
-      <CalendarScreen
-        header="Wann hattest du deine letzte Menstruation?"
-        title="Weiter"
-      />
-=======
-     <Text>huhu</Text>
->>>>>>> b7f5f52 (NotificationScreen)
+   <ChangePWScreen title="ändern"/>
     </View>
   );
-=======
-  return <View style={styles.container}>
-    <AddEntryScreen/>
-  </View>;
->>>>>>> df7d898 (new screens, minor text fixes)
-=======
-  return <View style={styles.container}>
-    <AddEntryScreen/>
-  </View>;
->>>>>>> df7d898e3f57f7775c9c97cd06ad4309d74ecada
 }
 
 const styles = StyleSheet.create({
@@ -55,15 +39,18 @@ const styles = StyleSheet.create({
 });
 
 /**
-<<<<<<< HEAD
  * Just Commentary Dump to test diff Screens with their props.
+ * 
  *  <MensCycleScreen title= "Weiter"/>
  *  <LogoScreen title='Press Me'/>
+ * <AddEntryScreen/>
  * <NotificationScreen/>
+ * <AboutUsScreen header="Über uns" />
+ *  <MensCycleChangeScreen header="Menstruations- und Zykluslänge ändern" title="ändern"/>
  * <InfoTextScreen header="Hallo!" title="Weiter"/>
  * <ChoosePwScreen title="Weiter"/>
- *  <CalendarScreen
-        header="Wann hattest du deine letzte Menstruation?"
+ * <InfoWOButtScreen header="Did you know.." />
+ *   <CalendarScreen
         title="Weiter"
       />
  * <ChangePWScreen title="ändern"/>
