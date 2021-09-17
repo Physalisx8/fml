@@ -9,10 +9,22 @@ import { View, StyleSheet, Image } from "react-native";
  */
 const UILogo = (props) => {
   // set logo path dependent on what prop name was given
-  var ImgSrc =
-    props.src === "lock"
-      ? require("../assets/iE-wdltA.png")
-      : require("../assets/settings.png");
+  var ImgSrc;
+
+  switch (props.src) {
+    case "lock":
+      ImgSrc = require("../assets/iE-wdltA.png");
+      break;
+    case "plus":
+      ImgSrc = require("../assets/plus.png");
+      break;
+    case "gear":
+      ImgSrc = require("../assets/settings.png");
+      break;
+    default:
+      ImgSrc = require("../assets/settings.png");
+  }
+
   return (
     <View>
       <Image style={styles.logo} source={ImgSrc} />

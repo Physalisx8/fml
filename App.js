@@ -22,10 +22,7 @@ import ChangePWScreen from "./screens/ChangePWScreen";
 export default function App() {
   return (
     <View style={styles.container}>
-      <CalendarScreen
-        header="Wann hattest du deine letzte Menstruation?"
-        title="Weiter"
-      />
+      <ChoosePwScreen title="Weiter" />
     </View>
   );
 }
