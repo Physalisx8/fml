@@ -11,6 +11,8 @@ import colors from "../constants/colors";
  * ToDo: Navigation Bar
  * Decide on a diff Font? 
  * 
+ * STYLES
+ * 
  * @param {*} props 
  * @returns 
  */
@@ -23,27 +25,24 @@ const InfoTextScreen = (props) => {
         </View>
         
         <View style={styles.textBox}>
-        <Text style={styles.text2}>{content.Datenschutz4}</Text>
+        <Text style={styles.text}>{content.Datenschutz4}</Text>
         </View>
 
-      <View style={styles.button}>
+      <View style={styles.buttonBox}>
         <Pressable
-          style={styles.button1}
+          style={styles.buttonDesign}
           onPress={() => Alert.alert("am pressed omg")}
         >
-          <Text style={styles.text}>{props.title}</Text>
+          <Text style={styles.textButton}>{props.title}</Text>
         </Pressable>
       </View>
     </View>
   );
 };
-//quick reminder: Button gehört zum Navigation Component. Touchable Opacity wär noch cool.
-//Standard Button lässt sich nicht verändern. Müsste Pressable nehmen.
 
 
 const styles = StyleSheet.create({
   container: {
-    
     height: "100%",
     paddingTop: 50,
   },
@@ -53,28 +52,31 @@ const styles = StyleSheet.create({
       lineHeight: 36,
     
   },
-  button: {
-    margin: 50,
-    elevation: 5,
-  },
-  text: {
-    color: colors.mainLG,
-    fontSize: 16,
-    lineHeight: 21,
-    letterSpacing: 0.25,
-  },
+  
   textBox:{
       height: '60%',
       width: '80%',
       paddingTop: 20, 
   },
 
-  text2:{
+  text:{
       color: colors.mainG,
       fontSize: 20, 
   },
 
-  button1: {
+  //Button Styles
+  buttonBox: {
+    margin: 50,
+    elevation: 5,
+  },
+
+  textButton: {
+    color: colors.mainLG,
+    fontSize: 16,
+    lineHeight: 21,
+    letterSpacing: 0.25,
+  },
+  buttonDesign: {
     borderRadius: 8,
     height: 40,
     elevation: 3,
@@ -82,10 +84,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  logo: {
-    width: 300,
-    height: 200,
-  },
+
 });
 
 export default InfoTextScreen;

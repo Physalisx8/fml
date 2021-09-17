@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, StyleSheet, Image, Alert, Pressable, Text } from "react-native";
+import { View, StyleSheet, Alert, Pressable, Text } from "react-native";
 import UILogo from "../components/UILogo";
 import colors from "../constants/colors";
 import Input from "../components/Input";
@@ -13,41 +13,39 @@ import * as content from "../constants/texts";
  * ToDo: Navigation Bar
  * may find another solution for the marked Dates, it's just a dummy rn
  * also find a way to get the input outta it but that's prob. a diff issue
+ * 
+ * STYLE <3
  *
  * @param {} props
  * @returns
  */
 
-
 const ChoosePwScreen = (props) => {
   return (
-    <View style={styles.imageBox}>
-      <View>
-        <UILogo src="lock" />
-        <View style={styles.title}>
-          <Text style={styles.text2}>{content.start7}</Text>
+    <View style={styles.container}>
+      <UILogo src="lock" />
+      <View style={styles.title}>
+        <Text style={styles.text}>{content.start7}</Text>
+        <View style={styles.inputBox}>
+          <Input title="Passwort" />
+          <Input title="Wiederholen" />
         </View>
-        <Input title="Passwort"/>
-        <Input title="Wiederholen"/>
       </View>
 
-      <View style={styles.button}>
+      <View style={styles.buttonBox}>
         <Pressable
-          style={styles.button1}
+          style={styles.buttonDesign}
           onPress={() => Alert.alert("am pressed omg")}
         >
-          <Text style={styles.text}>{props.title}</Text>
+          <Text style={styles.textButton}>{props.title}</Text>
         </Pressable>
       </View>
     </View>
   );
 };
-//quick reminder: Button gehört zum Navigation Component. Touchable Opacity wär noch cool.
-//https://www.skptricks.com/2018/11/react-native-responsive-image-scale-to-fit-example.html
-//Der button hat irgendwann seine default width vergessen wtf..
 
 const styles = StyleSheet.create({
-  imageBox: {
+  container: {
     flex: 1,
     flexDirection: "column",
     paddingHorizontal: 60,
@@ -60,23 +58,27 @@ const styles = StyleSheet.create({
     fontSize: 32,
     lineHeight: 36,
   },
-  button: {
+
+  inputBox: {},
+
+  text: {
+    color: colors.mainG,
+    fontSize: 20,
+  },
+
+  //Button Styles
+  buttonBox: {
     elevation: 5,
     alignItems: "center",
   },
-  text: {
+  textButton: {
     color: colors.mainLG,
     fontSize: 16,
     lineHeight: 21,
     letterSpacing: 0.25,
   },
 
-  text2: {
-    color: colors.mainG,
-    fontSize: 20,
-  },
-
-  button1: {
+  buttonDesign: {
     borderRadius: 8,
     height: 40,
     width: 80,

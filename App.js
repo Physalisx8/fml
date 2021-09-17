@@ -11,6 +11,9 @@ import MensCycleScreen from "./screens/MensCycleScreen";
 
 import * as content from "./constants/texts";
 import ChangePWScreen from "./screens/ChangePWScreen";
+import AboutUsScreen from "./screens/AboutUsScreen";
+import MensCycleChangeScreen from "./screens/MensCycleChangeScreen";
+import InfoWOButtScreen from "./screens/InfoWOButtScreen";
 
 /**
  * The MASTER APP.
@@ -22,10 +25,7 @@ import ChangePWScreen from "./screens/ChangePWScreen";
 export default function App() {
   return (
     <View style={styles.container}>
-      <CalendarScreen
-        header="Wann hattest du deine letzte Menstruation?"
-        title="Weiter"
-      />
+   <ChangePWScreen title="ändern"/>
     </View>
   );
 }
@@ -38,15 +38,18 @@ const styles = StyleSheet.create({
 });
 
 /**
-<<<<<<< HEAD
  * Just Commentary Dump to test diff Screens with their props.
+ * 
  *  <MensCycleScreen title= "Weiter"/>
  *  <LogoScreen title='Press Me'/>
+ * <AddEntryScreen/>
  * <NotificationScreen/>
+ * <AboutUsScreen header="Über uns" />
+ *  <MensCycleChangeScreen header="Menstruations- und Zykluslänge ändern" title="ändern"/>
  * <InfoTextScreen header="Hallo!" title="Weiter"/>
  * <ChoosePwScreen title="Weiter"/>
- *  <CalendarScreen
-        header="Wann hattest du deine letzte Menstruation?"
+ * <InfoWOButtScreen header="Did you know.." />
+ *   <CalendarScreen
         title="Weiter"
       />
  * <ChangePWScreen title="ändern"/>
