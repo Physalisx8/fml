@@ -8,7 +8,6 @@ import ChoosePwScreen from "./screens/ChoosePwScreen";
 import CalendarScreen from "./screens/CalendarScreen";
 import NotificationScreen from "./screens/NotificationScreen";
 import MensCycleScreen from "./screens/MensCycleScreen";
-import AddEntryScreen from "./screens/AddEntryScreen";
 
 import * as content from "./constants/texts";
 import ChangePWScreen from "./screens/ChangePWScreen";
@@ -21,30 +20,14 @@ import ChangePWScreen from "./screens/ChangePWScreen";
  * @returns
  */
 export default function App() {
-<<<<<<< HEAD
-<<<<<<< HEAD
   return (
     <View style={styles.container}>
-<<<<<<< HEAD
       <CalendarScreen
         header="Wann hattest du deine letzte Menstruation?"
         title="Weiter"
       />
-=======
-     <Text>huhu</Text>
->>>>>>> b7f5f52 (NotificationScreen)
     </View>
   );
-=======
-  return <View style={styles.container}>
-    <AddEntryScreen/>
-  </View>;
->>>>>>> df7d898 (new screens, minor text fixes)
-=======
-  return <View style={styles.container}>
-    <AddEntryScreen/>
-  </View>;
->>>>>>> df7d898e3f57f7775c9c97cd06ad4309d74ecada
 }
 
 const styles = StyleSheet.create({
