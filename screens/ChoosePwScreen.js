@@ -3,7 +3,7 @@ import { View, StyleSheet, Image, Alert, Pressable, Text } from "react-native";
 import UILogo from "../components/UILogo";
 import colors from "../constants/colors";
 import Input from "../components/Input";
-<<<<<<< HEAD
+
 /**
  *  ChoosePwScreen for Starters!
  *  takes the UILogo & Input Component.
@@ -16,9 +16,7 @@ import Input from "../components/Input";
  * @param {} props
  * @returns
  */
-=======
->>>>>>> 0f36943554a315b218f3f670dccd1a6aada52df6
-import * as content from "../content/texts.json";
+import * as content from "../constants/texts";
 
 const ChoosePwScreen = (props) => {
   return (
