@@ -9,6 +9,10 @@ import { View, StyleSheet, Image } from "react-native";
  */
 const UILogo = (props) => {
   // set logo path dependent on what prop name was given
+  var LogoStyle =
+    props.styleType === "tiny"
+      ? { width: 40, height: 50, resizeMode: "contain" }
+      : { width: 60, height: 70, resizeMode: "contain" };
   var ImgSrc;
 
   switch (props.src) {
@@ -27,16 +31,9 @@ const UILogo = (props) => {
 
   return (
     <View>
-      <Image style={styles.logo} source={ImgSrc} />
+      <Image style={LogoStyle} source={ImgSrc} />
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  logo: {
-    width: 60,
-    height: 70,
-  },
-});
 
 export default UILogo;

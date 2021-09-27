@@ -4,6 +4,7 @@ import UILogo from "../components/UILogo";
 import colors from "../constants/colors";
 import Input from "../components/Input";
 import * as content from "../constants/texts";
+import AddButton from "../components/AddButton";
 
 /**
  *  ChoosePwScreen for Starters!
@@ -18,17 +19,16 @@ import * as content from "../constants/texts";
  * @returns
  */
 
-
 const ChoosePwScreen = (props) => {
   return (
     <View style={styles.imageBox}>
       <View>
-        <UILogo src="lock" />
+        <UILogo src="gear" />
         <View style={styles.title}>
           <Text style={styles.text2}>{content.start7}</Text>
         </View>
-        <Input title="Passwort"/>
-        <Input title="Wiederholen"/>
+        <Input title="Passwort" />
+        <Input title="Wiederholen" />
       </View>
 
       <View style={styles.button}>
