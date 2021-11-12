@@ -12,6 +12,8 @@ import MensCycleScreen from "./screens/MensCycleScreen";
 import * as content from "./constants/texts";
 import ChangePWScreen from "./screens/ChangePWScreen";
 import IndexCal from "./screens/IndexCal";
+import PasswordCheck  from "./screens/PasswordCheck";
+import MonasChoosePwScreen from "./screens/MonasChoosePwScreen";
 
 /**
  * The MASTER APP.
@@ -23,7 +25,7 @@ import IndexCal from "./screens/IndexCal";
 export default function App() {
   return (
     <View style={styles.container}>
-      <IndexCal />
+      <MonasChoosePwScreen/>
     </View>
   );
 }
