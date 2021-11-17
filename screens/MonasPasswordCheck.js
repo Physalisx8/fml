@@ -5,7 +5,9 @@ import colors from "../constants/colors";
 import Input from "../components/Input";
 import * as content from "../constants/texts";
 import AddButton from "../components/AddButton";
-import storeMyStuff from "../Database/CreateDatabase";
+import { getMyStuff } from "../Database/CreateDatabase";
+import { storeMyStuff } from "../Database/CreateDatabase";
+
 
 /**
  *  ChoosePwScreen for Starters!
@@ -19,38 +21,50 @@ import storeMyStuff from "../Database/CreateDatabase";
  * @param {} props
  * @returns
  */
+ const passwordScreenCheck=async(password , givenPassword)=>{
+  if(password==givenPassword){
 
-//Das hier checkt erst, ob die Passwörter gleich sind, und speichert dann mit der storeMyStuff aus CreateDatabase das Passwort unter dem Key "passwordKey"
-const checkPasswords=async(firstPassword1, secondPassword1)=>{
-    if(firstPassword1==secondPassword1){
-        {Alert.alert("Vielen Dank! Dein Passwort wurde gespeichert ")}
-        storeMyStuff('passwordKey',firstPassword1);
-    }else{
-        {Alert.alert("Passwörter sind nicht gleich")}
-    }
+      //Hier weiterleitung einfügen, ich hab doch keine Ahnung von Navigation help
+      {Alert.alert("Richtig! Jetzt solltest du eigentlich weitergeleitet werden")}
+  }else{
+      {Alert.alert("Passwort ungültig")}
+  }
 }
 
+const MonasPasswordCheck = (props) => {
 
-const MonasChoosePwScreen = (props) => {
-
-const [firstPassword1, setFirstPassword1]=useState(0);
-const [secondPassword1, setSecondPassword1]=useState(0);
+  storeMyStuff('passwordKey',1234);                 //Das hier muss raus sobald es wirklich ein altes Passwort gibt
+  
+  const [givenPassword, setGivenPassword]= useState();
+  const [oldPassword, setOldPassword]= useState();
+ 
+  const [text3, setText3] = useState('');
+  
+  getMyStuff('passwordKey').then((returnedValue)=>{
+    setOldPassword(JSON.parse(returnedValue));
+  })
   return (
     <View style={styles.imageBox}>
       <View>
         <UILogo src="gear" />
         <View style={styles.title}>
-          <Text style={styles.text2}>{content.start7}</Text>
+          <Text style={styles.text2}>{content.checkPasswordText}</Text>
         </View>
-        <Input title="Passwort" value={firstPassword1}/>
-        <Input title="Wiederholen" value={secondPassword1}/>
-      
+        <Input title="Passwort" />
+        <TextInput
+          style={{height: 60}}
+          placeholder="Passwort"
+          onChangeText={text => setGivenPassword(text)}
+          defaultValue={text3}
+      />
+   
       </View>
 
       <View style={styles.button}>
         <Pressable
           style={styles.button1}
-          onPress={()=>checkPasswords(firstPassword1, secondPassword1)}>
+          onPress={() => passwordScreenCheck(oldPassword, givenPassword)}
+        >
           <Text style={styles.text}>{props.title}</Text>
         </Pressable>
       </View>
@@ -102,4 +116,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MonasChoosePwScreen;
+export default MonasPasswordCheck;
